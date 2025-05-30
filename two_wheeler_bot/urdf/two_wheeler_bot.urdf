@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="two_wheeler_bot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-8.9818E-06 -1.1102E-16 0.081208"
+        rpy="0 0 0" />
+      <mass
+        value="33.215" />
+      <inertia
+        ixx="0.41128"
+        ixy="-3.3206E-17"
+        ixz="-2.2526E-05"
+        iyy="0.16225"
+        iyz="1.4038E-18"
+        izz="0.56846" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_wheeler_bot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.68627 0.65882 0.63922 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_wheeler_bot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="lw_Link">
+    <inertial>
+      <origin
+        xyz="-2.7357E-06 3.3017E-07 -0.0071869"
+        rpy="0 0 0" />
+      <mass
+        value="4.809" />
+      <inertia
+        ixx="0.022657"
+        ixy="2.6861E-10"
+        ixz="-1.0213E-07"
+        iyy="0.022657"
+        iyz="1.2455E-08"
+        izz="0.033315" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_wheeler_bot/meshes/lw_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_wheeler_bot/meshes/lw_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lw_joint"
+    type="continuous">
+    <origin
+      xyz="0.00080677 0.27524 -0.064"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lw_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="rw_Link">
+    <inertial>
+      <origin
+        xyz="2.0467E-06 1.8451E-06 0.0071869"
+        rpy="0 0 0" />
+      <mass
+        value="4.809" />
+      <inertia
+        ixx="0.022657"
+        ixy="-3.449E-09"
+        ixz="-7.6334E-08"
+        iyy="0.022657"
+        iyz="-6.8986E-08"
+        izz="0.033315" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_wheeler_bot/meshes/rw_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.29804 0.29804 0.29804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_wheeler_bot/meshes/rw_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rw_joint"
+    type="continuous">
+    <origin
+      xyz="0.00080677 -0.27524 -0.064"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rw_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="cws_Link">
+    <inertial>
+      <origin
+        xyz="-0.0039577 -0.00014669 -0.041094"
+        rpy="0 0 0" />
+      <mass
+        value="1.586" />
+      <inertia
+        ixx="0.0015129"
+        ixy="-9.0538E-06"
+        ixz="-1.8122E-05"
+        iyy="0.0020984"
+        iyz="-1.2815E-07"
+        izz="0.0013004" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_wheeler_bot/meshes/cws_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_wheeler_bot/meshes/cws_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cws_joint"
+    type="continuous">
+    <origin
+      xyz="0.10215 0 -0.082"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="cws_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="lidar_Link">
+    <inertial>
+      <origin
+        xyz="0.0095994 -3.2001E-05 0.030322"
+        rpy="0 0 0" />
+      <mass
+        value="1.4546" />
+      <inertia
+        ixx="0.0012252"
+        ixy="3.1265E-06"
+        ixz="-3.1426E-05"
+        iyy="0.0021631"
+        iyz="1.0476E-07"
+        izz="0.0025955" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_wheeler_bot/meshes/lidar_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://two_wheeler_bot/meshes/lidar_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_joint"
+    type="continuous">
+    <origin
+      xyz="0 0 0.24"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+</robot>
